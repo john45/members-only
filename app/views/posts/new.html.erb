@@ -1,0 +1,9 @@
+<%= form_for(@post) do |f| %>
+  <ul>
+    <li><%= f.label :title %></li>
+    <li><%= f.text_field :title %></li>
+    <li><%= f.label :body %></li>
+    <li><%= f.text_field :body %></li>
+    <li><%= f.submit "Create post" %></li>
+  </ul>
+<% end %>

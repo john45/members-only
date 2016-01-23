@@ -2,4 +2,13 @@
 
 <p>SignIn</p>
 <br>
-<%= debug(params) if Rails.env.development? %>
+<ul>
+  <%= form_for(:session, url: sessions_path) do |f| %>
+    <li><%= f.label :email %></li>
+    <li><%= f.text_field :email %></li>
+
+    <li><%= f.label :password %></li>
+    <li><%= f.password_field :password %></li>
+    <li><%= f.submit 'Ligin into the system' %></li>
+  <% end %>
+</ul>

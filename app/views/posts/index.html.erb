@@ -1,0 +1,20 @@
+<p>All posts</p>
+<% if @posts %>
+
+<% @posts.each do |post| %>
+  <ul>
+    <% if signed_in? %>
+
+      <li>Author name of the post is: <%= post.user.name %></li>
+    <% else %>
+      <strong>very secret</strong>
+    <% end %>
+
+    <li>title of post: <%= post.title %></li>
+    <li>body of post: <%= post.body %></li>
+  </ul>
+<% end %>
+
+<%else%>
+  <b>Zapisi eshe ne sozdani!</b>
+<% end %>
